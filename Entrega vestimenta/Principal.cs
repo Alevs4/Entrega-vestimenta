@@ -44,7 +44,7 @@ namespace Entrega_vestimenta
             Verificar = new DPFP.Verification.Verification();
             Resultado = new DPFP.Verification.Verification.Result();
         }
-
+        private int xint = 1;
         private void xVerificationControl_OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
         {
             DPFP.Template template = new DPFP.Template();
@@ -82,7 +82,20 @@ namespace Entrega_vestimenta
                         TxtSexo.Text = Convert.ToString(xitem["Sexo"]);
                         TxtTurno.Text = Convert.ToString(xitem["Turno"]);
 
+                    }else
+                    {
+                        if (xint == totalFila)
+                        {
+                            if (TerminarBucle == false)
+                            {
+                                MessageBox.Show("Huella Digital no Existe en el sistema");
+                                xVerificationControl.Enabled = true;
+                       
+                            }
+                        }
                     }
+                    xint += 1;
+
                 }
             }
             catch (Exception ex)
@@ -90,6 +103,13 @@ namespace Entrega_vestimenta
                 MessageBox.Show(ex.Message);
                 //LimpiarFormulario();
             }
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult Mensaje = MessageBox.Show("Estas seguro que quiere cerrar la APP", "Requerimiento del Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (Mensaje == DialogResult.OK)
+                Application.Exit();
         }
     }
 
