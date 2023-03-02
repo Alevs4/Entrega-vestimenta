@@ -18,7 +18,7 @@ namespace Entrega_vestimenta.Datos
         public void BD_Registrar_Ropa(EN_Ropa ropa)
         {
             SqlConnection cn = new SqlConnection(Conectar());
-            SqlCommand cmd = new SqlCommand("Sp_Insert_Personal", cn);
+            SqlCommand cmd = new SqlCommand("Insertar_ropa", cn);
             try
             {
                 cmd.CommandTimeout = 20;
@@ -41,6 +41,7 @@ namespace Entrega_vestimenta.Datos
                 cmd.Parameters.AddWithValue("@guantesM", ropa.GuantesMultiflex);
                 cmd.Parameters.AddWithValue("@guantesG", ropa.GuantesG);
                 cmd.Parameters.AddWithValue("@guantesP", ropa.GuantesP);
+                cmd.Parameters.AddWithValue("@gorroP", ropa.GorroP);
                 cmd.Parameters.AddWithValue("@cuelloP", ropa.CuelloP);
                 cmd.Parameters.AddWithValue("@cofiaR", ropa.CofiaR);
                 cmd.Parameters.AddWithValue("@jockey", ropa.Jockey);

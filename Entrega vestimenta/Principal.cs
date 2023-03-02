@@ -117,7 +117,7 @@ namespace Entrega_vestimenta
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            Guardar_Personal();
+            Guardar_ropa();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace Entrega_vestimenta
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void Guardar_Personal()
+        private void Guardar_ropa()
         {
 
             RN_Ropa obj = new RN_Ropa();
@@ -150,30 +150,30 @@ namespace Entrega_vestimenta
                 per.Estado = TxtEstado.Text;
                 per.Sexo = TxtSexo.Text;
                 per.Turno = TxtTurno.Text;
-                per.Kimono = Convert.ToInt32(Txt1.Text);
-                per.Delantal_Rojo = Convert.ToInt32(Txt2.Text);
-                per.Delantal_blanco = Convert.ToInt32(Txt3.Text);
-                per.Zapatos = Convert.ToInt32(Txt4.Text);
-                per.ChalecoR = Convert.ToInt32(Txt5.Text);
-                per.ParcaTer = Convert.ToInt32(Txt6.Text);
-                per.JardineraTer = Convert.ToInt32(Txt7.Text);
-                per.GuantesMultiflex = Convert.ToInt32(Txt8.Text);
-                per.GuantesG = Convert.ToInt32(Txt9.Text);
-                per.GuantesP = Convert.ToInt32(Txt10.Text);
-                per.GorroP = Convert.ToInt32(Txt11.Text);
-                per.CuelloP = Convert.ToInt32(Txt12.Text);
-                per.CofiaR = Convert.ToInt32(Txt13.Text);
-                per.Jockey = Convert.ToInt32(Txt14.Text);
-                per.Manguillas = Convert.ToInt32(Txt15.Text);
-                per.TrajeAgua = Convert.ToInt32(Txt16.Text);
-                per.CubreCalzado = Convert.ToInt32(Txt17.Text);
-                per.BotasAgua = Convert.ToInt32(Txt18.Text);
-                per.PoleraLarga = Convert.ToInt32(Txt19.Text);
-                per.Poleron = Convert.ToInt32(Txt20.Text);
-                per.PantalonCargo = Convert.ToInt32(Txt21.Text);
-                per.Pechera = Convert.ToInt32(Txt22.Text);
-                per.Oberol = Convert.ToInt32(Txt23.Text);
-                per.Otro = Convert.ToInt32(Txt24.Text);
+                per.Kimono = Txt1.Text;
+                per.Delantal_Rojo = Txt2.Text;
+                per.Delantal_blanco = Txt3.Text;
+                per.Zapatos = Txt4.Text;
+                per.ChalecoR = Txt5.Text;
+                per.ParcaTer = Txt6.Text;
+                per.JardineraTer = Txt7.Text;
+                per.GuantesMultiflex = Txt8.Text;
+                per.GuantesG = Txt9.Text;
+                per.GuantesP = Txt10.Text;
+                per.GorroP = Txt11.Text;
+                per.CuelloP = Txt12.Text;
+                per.CofiaR = Txt13.Text;
+                per.Jockey = Txt14.Text;
+                per.Manguillas = Txt15.Text;
+                per.TrajeAgua = Txt16.Text;
+                per.CubreCalzado = Txt17.Text;
+                per.BotasAgua = Txt18.Text;
+                per.PoleraLarga = Txt19.Text;
+                per.Poleron = Txt20.Text;
+                per.PantalonCargo = Txt21.Text;
+                per.Pechera = Txt22.Text;
+                per.Oberol = Txt23.Text;
+                per.Otro = Txt24.Text;
                 obj.RN_Registrar_Ropa(per);
 
                 if (BD_Entrega_Ropa.saved == true)
