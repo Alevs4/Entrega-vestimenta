@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnEliminar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.BtnEditar = new Entrega_vestimenta.Componentes.BotonesRedondos();
@@ -109,8 +111,7 @@
             this.Lbl_NomUsu = new System.Windows.Forms.Label();
             this.lbl_rolNom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.TxtId = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -220,9 +221,29 @@
             this.tabPage1.Text = "Registro entrega Vestimenta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // TxtId
+            // 
+            this.TxtId.Enabled = false;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(611, 29);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(149, 27);
+            this.TxtId.TabIndex = 205;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(462, 30);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 22);
+            this.label37.TabIndex = 204;
+            this.label37.Text = "ID Personal";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.BtnEliminar);
             this.panel2.Controls.Add(this.BtnEditar);
             this.panel2.Controls.Add(this.BtnGuardar);
@@ -292,7 +313,7 @@
             this.BtnEliminar.FlatAppearance.BorderSize = 0;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(464, 598);
+            this.BtnEliminar.Location = new System.Drawing.Point(479, 598);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(150, 44);
             this.BtnEliminar.TabIndex = 256;
@@ -311,7 +332,7 @@
             this.BtnEditar.FlatAppearance.BorderSize = 0;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Location = new System.Drawing.Point(258, 598);
+            this.BtnEditar.Location = new System.Drawing.Point(323, 598);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(150, 44);
             this.BtnEditar.TabIndex = 255;
@@ -330,7 +351,7 @@
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardar.Location = new System.Drawing.Point(66, 598);
+            this.BtnGuardar.Location = new System.Drawing.Point(174, 598);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(136, 44);
             this.BtnGuardar.TabIndex = 254;
@@ -937,24 +958,24 @@
             this.pictureBox1.TabIndex = 194;
             this.pictureBox1.TabStop = false;
             // 
-            // label37
+            // BtnBuscar
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(462, 30);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(143, 28);
-            this.label37.TabIndex = 204;
-            this.label37.Text = "ID Personal";
-            // 
-            // TxtId
-            // 
-            this.TxtId.Enabled = false;
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(611, 29);
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(149, 27);
-            this.TxtId.TabIndex = 205;
+            this.BtnBuscar.BackColor = System.Drawing.Color.Gray;
+            this.BtnBuscar.BackgroundColor = System.Drawing.Color.Gray;
+            this.BtnBuscar.BorderColor = System.Drawing.Color.Black;
+            this.BtnBuscar.BorderRadius = 15;
+            this.BtnBuscar.BorderSize = 2;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(17, 598);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(136, 44);
+            this.BtnBuscar.TabIndex = 255;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextColor = System.Drawing.Color.White;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // Principal
             // 
@@ -1069,5 +1090,6 @@
         private Componentes.BotonesRedondos botonesRedondos1;
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label37;
+        private Componentes.BotonesRedondos BtnBuscar;
     }
 }

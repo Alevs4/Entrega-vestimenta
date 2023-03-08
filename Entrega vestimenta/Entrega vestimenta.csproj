@@ -101,6 +101,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioBuscar.Designer.cs">
+      <DependentUpon>FormularioBuscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\RN_Personal.cs" />
     <Compile Include="Negocio\RN_Ropa.cs" />
     <Compile Include="Negocio\RN_Usuarios.cs" />
@@ -114,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBuscar.resx">
+      <DependentUpon>FormularioBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

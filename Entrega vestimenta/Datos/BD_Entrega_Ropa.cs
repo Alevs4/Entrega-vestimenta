@@ -73,5 +73,31 @@ namespace Entrega_vestimenta.Datos
                 MessageBox.Show("Algo Malo Pasó" + ex.Message, "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        public DataTable BD_Buscar_Entrega_XRut(string valor)
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Cargar_Engtrega_xRut", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@rut", valor);
+                DataTable dato = new DataTable();
+
+                da.Fill(dato);
+                da = null;
+                return dato;
+            }
+            catch (Exception ex)
+            {
+
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Algo Malo Pasó" + ex.Message, "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
     }
 }

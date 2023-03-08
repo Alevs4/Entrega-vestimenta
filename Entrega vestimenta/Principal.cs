@@ -46,6 +46,8 @@ namespace Entrega_vestimenta
         {
             Verificar = new DPFP.Verification.Verification();
             Resultado = new DPFP.Verification.Verification.Result();
+            BtnEditar.Visible = false;
+            BtnEliminar.Visible = false;
         }
         private int xint = 1;
         private void xVerificationControl_OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
@@ -92,7 +94,7 @@ namespace Entrega_vestimenta
                             if (TerminarBucle == false)
                             {
                                 MessageBox.Show("Huella Digital no Existe en el sistema");
-                                xVerificationControl.Enabled = true;
+                                xVerificationControl.Enabled = false;
                        
                             }
                         }
@@ -122,7 +124,7 @@ namespace Entrega_vestimenta
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-
+         
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -173,9 +175,10 @@ namespace Entrega_vestimenta
                 per.PantalonCargo = Txt21.Text;
                 per.Pechera = Txt22.Text;
                 per.Oberol = Txt23.Text;
-                per.Otro = Txt24.Text;
+                per.Otro = Txt24.Text; 
+                validarTextos();
                 obj.RN_Registrar_Ropa(per);
-
+              
                 if (BD_Entrega_Ropa.saved == true)
                 {
 
@@ -186,6 +189,61 @@ namespace Entrega_vestimenta
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            FormularioBuscar buscar = new FormularioBuscar();
+            buscar.ShowDialog();
+        }
+        private void validarTextos()
+        {
+            if (TxtNombre.Text =="" || TxtRut.Text=="" || TxtId.Text=="")
+            {
+                MessageBox.Show("Debe llenar todos los campos", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public bool xedit = false;
+        public void Buscar_Entrega_ParaEditar(string id)
+        {
+            try
+            {
+                RN_Ropa obj = new RN_Ropa();
+                DataTable dt = new DataTable();
+
+
+                dt = obj.RN_Buscar_entrega_xValor(id);
+                if (dt.Rows.Count == 0) return;
+                {
+                    TxtRut.Text = Convert.ToString(dt.Rows[0]["DNIPR"]);
+                    TxtNombre.Text = Convert.ToString(dt.Rows[0]["Nombre_completo"]);
+                    //txt_direccion.Text = Convert.ToString(dt.Rows[0]["Domicilio"]);
+                    //txt_correo.Text = Convert.ToString(dt.Rows[0]["Correo"]);
+                    txt_NroCelular.Text = Convert.ToString(dt.Rows[0]["Celular"]);
+                    cbo_sexo.Text = Convert.ToString(dt.Rows[0]["Sexo"]);
+                    cbo_Distrito.Text = Convert.ToString(dt.Rows[0]["Id_Distrito"]);
+                    cbo_rol.Text = Convert.ToString(dt.Rows[0]["Id_rol"]);
+                    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
+                    CboRol.Text = Convert.ToString(dt.Rows[0]["Rol"]);
+                    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
+                    Txtestado.Text = Convert.ToString(dt.Rows[0]["Estado_Per"]);
+                    dtp_fechaNaci.Value = Convert.ToDateTime(dt.Rows[0]["Fec_Naci"]);
+                    DTP_Cambio.Value = Convert.ToDateTime(dt.Rows[0]["FechaCambio"]);
+                    CboTurno.Text = Convert.ToString(dt.Rows[0]["Turno"]);
+                    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["Foto"]);
+                    Bitmap bm = new Bitmap(ms);
+                    Pic_persona.Image = bm;
+                }
+
+                xedit = true;
+                BtnEditar.Enabled = true;
+                //Pic_persona.Load(xFotoruta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar los Datos: " + ex.Message, "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
