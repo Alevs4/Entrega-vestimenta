@@ -217,24 +217,24 @@ namespace Entrega_vestimenta
                 dt = obj.RN_Buscar_entrega_xValor(id);
                 if (dt.Rows.Count == 0) return;
                 {
-                    TxtRut.Text = Convert.ToString(dt.Rows[0]["DNIPR"]);
-                    TxtNombre.Text = Convert.ToString(dt.Rows[0]["Nombre_completo"]);
-                    //txt_direccion.Text = Convert.ToString(dt.Rows[0]["Domicilio"]);
-                    //txt_correo.Text = Convert.ToString(dt.Rows[0]["Correo"]);
-                    txt_NroCelular.Text = Convert.ToString(dt.Rows[0]["Celular"]);
-                    cbo_sexo.Text = Convert.ToString(dt.Rows[0]["Sexo"]);
-                    cbo_Distrito.Text = Convert.ToString(dt.Rows[0]["Id_Distrito"]);
-                    cbo_rol.Text = Convert.ToString(dt.Rows[0]["Id_rol"]);
-                    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
-                    CboRol.Text = Convert.ToString(dt.Rows[0]["Rol"]);
-                    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
-                    Txtestado.Text = Convert.ToString(dt.Rows[0]["Estado_Per"]);
-                    dtp_fechaNaci.Value = Convert.ToDateTime(dt.Rows[0]["Fec_Naci"]);
-                    DTP_Cambio.Value = Convert.ToDateTime(dt.Rows[0]["FechaCambio"]);
-                    CboTurno.Text = Convert.ToString(dt.Rows[0]["Turno"]);
-                    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["Foto"]);
-                    Bitmap bm = new Bitmap(ms);
-                    Pic_persona.Image = bm;
+                    TxtRut.Text = Convert.ToString(dt.Rows[0]["rut"]);
+                    TxtNombre.Text = Convert.ToString(dt.Rows[0]["Nombre"]);
+                    TxtId.Text = Convert.ToString(dt.Rows[0]["Id_personal"]);
+                    TxtArea.Text = Convert.ToString(dt.Rows[0]["area"]);
+                    TxtEstado.Text = Convert.ToString(dt.Rows[0]["estado"]);
+                    TxtSexo.Text = Convert.ToString(dt.Rows[0]["sexo"]);
+                    TxtTurno.Text = Convert.ToString(dt.Rows[0]["turno"]);
+                //    cbo_rol.Text = Convert.ToString(dt.Rows[0]["Id_rol"]);
+                //    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
+                //    CboRol.Text = Convert.ToString(dt.Rows[0]["Rol"]);
+                //    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
+                //    Txtestado.Text = Convert.ToString(dt.Rows[0]["Estado_Per"]);
+                //    dtp_fechaNaci.Value = Convert.ToDateTime(dt.Rows[0]["Fec_Naci"]);
+                //    DTP_Cambio.Value = Convert.ToDateTime(dt.Rows[0]["FechaCambio"]);
+                //    CboTurno.Text = Convert.ToString(dt.Rows[0]["Turno"]);
+                //    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["Foto"]);
+                //    Bitmap bm = new Bitmap(ms);
+                //    Pic_persona.Image = bm;
                 }
 
                 xedit = true;
