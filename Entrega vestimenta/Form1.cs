@@ -67,24 +67,14 @@ namespace Entrega_vestimenta
             {
                 //los datos son correctos
                 //MessageBox.Show("Bienvenido al Sistema", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Cls_Libreria.Usuario = usu;
-
-                dt = obj.RN_Lerr_Datos_Usuario(usu);
-                if (dt.Rows.Count > 0)
-                {
-                    DataRow dr = dt.Rows[0];
-                    Cls_Libreria.IdRol = Convert.ToString(dr["Id_Usu"]);
-                    Cls_Libreria.Apellidos = Convert.ToString(dr["Nombre_Completo"]);
-                    Cls_Libreria.IdRol = Convert.ToString(dr["Id_Rol"]);
-                    Cls_Libreria.Rol = dr["NomRol"].ToString();
-                    Cls_Libreria.Foto = dr["Avatar"].ToString();
-                }
-
+       
 
                 Principal principal = new Principal();
                 this.Hide();
+                principal.BtnEditar.Visible = false;
+                principal.BtnEliminar.Visible = false;
                 principal.Show();
-                principal.Cargar_Datos_Usuario();
+   
         
             }
             else

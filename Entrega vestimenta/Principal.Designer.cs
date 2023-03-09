@@ -38,6 +38,7 @@
             this.TxtId = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnBuscar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.BtnEliminar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.BtnEditar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.BtnGuardar = new Entrega_vestimenta.Componentes.BotonesRedondos();
@@ -105,13 +106,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblHuella = new System.Windows.Forms.Label();
             this.xVerificationControl = new DPFP.Gui.Verification.VerificationControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Lbl_NomUsu = new System.Windows.Forms.Label();
-            this.lbl_rolNom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnBuscar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -210,7 +208,7 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.LblHuella);
             this.tabPage1.Controls.Add(this.xVerificationControl);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -303,6 +301,25 @@
             this.panel2.Size = new System.Drawing.Size(641, 676);
             this.panel2.TabIndex = 203;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Gray;
+            this.BtnBuscar.BackgroundColor = System.Drawing.Color.Gray;
+            this.BtnBuscar.BorderColor = System.Drawing.Color.Black;
+            this.BtnBuscar.BorderRadius = 15;
+            this.BtnBuscar.BorderSize = 2;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(8, 598);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(139, 44);
+            this.BtnBuscar.TabIndex = 255;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextColor = System.Drawing.Color.White;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // BtnEliminar
             // 
             this.BtnEliminar.BackColor = System.Drawing.Color.Red;
@@ -332,7 +349,7 @@
             this.BtnEditar.FlatAppearance.BorderSize = 0;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Location = new System.Drawing.Point(323, 598);
+            this.BtnEditar.Location = new System.Drawing.Point(321, 598);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(150, 44);
             this.BtnEditar.TabIndex = 255;
@@ -351,7 +368,7 @@
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardar.Location = new System.Drawing.Point(174, 598);
+            this.BtnGuardar.Location = new System.Drawing.Point(167, 598);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(136, 44);
             this.BtnGuardar.TabIndex = 254;
@@ -896,15 +913,15 @@
             this.label2.TabIndex = 183;
             this.label2.Text = "Personal";
             // 
-            // label1
+            // LblHuella
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 29);
-            this.label1.TabIndex = 182;
-            this.label1.Text = "Ingresar Huella";
+            this.LblHuella.AutoSize = true;
+            this.LblHuella.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHuella.Location = new System.Drawing.Point(31, 30);
+            this.LblHuella.Name = "LblHuella";
+            this.LblHuella.Size = new System.Drawing.Size(191, 29);
+            this.LblHuella.TabIndex = 182;
+            this.LblHuella.Text = "Ingresar Huella";
             // 
             // xVerificationControl
             // 
@@ -928,26 +945,6 @@
             this.tabPage2.Text = "Informes de entrega";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Lbl_NomUsu
-            // 
-            this.Lbl_NomUsu.AutoSize = true;
-            this.Lbl_NomUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NomUsu.Location = new System.Drawing.Point(59, 89);
-            this.Lbl_NomUsu.Name = "Lbl_NomUsu";
-            this.Lbl_NomUsu.Size = new System.Drawing.Size(85, 29);
-            this.Lbl_NomUsu.TabIndex = 2;
-            this.Lbl_NomUsu.Text = "label1";
-            // 
-            // lbl_rolNom
-            // 
-            this.lbl_rolNom.AutoSize = true;
-            this.lbl_rolNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rolNom.Location = new System.Drawing.Point(59, 129);
-            this.lbl_rolNom.Name = "lbl_rolNom";
-            this.lbl_rolNom.Size = new System.Drawing.Size(85, 29);
-            this.lbl_rolNom.TabIndex = 3;
-            this.lbl_rolNom.Text = "label2";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -958,40 +955,18 @@
             this.pictureBox1.TabIndex = 194;
             this.pictureBox1.TabStop = false;
             // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.Gray;
-            this.BtnBuscar.BackgroundColor = System.Drawing.Color.Gray;
-            this.BtnBuscar.BorderColor = System.Drawing.Color.Black;
-            this.BtnBuscar.BorderRadius = 15;
-            this.BtnBuscar.BorderSize = 2;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Location = new System.Drawing.Point(17, 598);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(136, 44);
-            this.BtnBuscar.TabIndex = 255;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.TextColor = System.Drawing.Color.White;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1599, 994);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lbl_rolNom);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.Lbl_NomUsu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1002,7 +977,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1013,10 +987,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Lbl_NomUsu;
-        private System.Windows.Forms.Label lbl_rolNom;
-        private System.Windows.Forms.Label label1;
-        private DPFP.Gui.Verification.VerificationControl xVerificationControl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtArea;
         private System.Windows.Forms.TextBox TxtRut;
@@ -1031,7 +1001,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TxtTurno;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Txt24;
         private System.Windows.Forms.TextBox Txt23;
         private System.Windows.Forms.TextBox Txt22;
@@ -1084,12 +1053,15 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private Componentes.BotonesRedondos BtnSalir;
-        private Componentes.BotonesRedondos BtnEditar;
-        private Componentes.BotonesRedondos BtnGuardar;
-        private Componentes.BotonesRedondos BtnEliminar;
         private Componentes.BotonesRedondos botonesRedondos1;
-        private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label37;
-        private Componentes.BotonesRedondos BtnBuscar;
+        public System.Windows.Forms.TextBox TxtId;
+        public Componentes.BotonesRedondos BtnEditar;
+        public Componentes.BotonesRedondos BtnEliminar;
+        public Componentes.BotonesRedondos BtnBuscar;
+        public Componentes.BotonesRedondos BtnGuardar;
+        public System.Windows.Forms.Panel panel2;
+        public DPFP.Gui.Verification.VerificationControl xVerificationControl;
+        public System.Windows.Forms.Label LblHuella;
     }
 }

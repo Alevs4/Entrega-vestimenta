@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Entrega_vestimenta.Componentes
 {
-    internal class BotonesRedondos : Button
+    public class BotonesRedondos : Button
     {
         private int borderSize = 0;
         private int borderRadius = 0;

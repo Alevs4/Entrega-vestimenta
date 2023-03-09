@@ -21,5 +21,11 @@ namespace Entrega_vestimenta.Negocio
             BD_Entrega_Ropa obj = new BD_Entrega_Ropa();
             return obj.BD_Buscar_Entrega_XRut(valor);
         }
+        public DataTable RN_Leer_toda_Entrga()
+        {
+            BD_Entrega_Ropa obj = new BD_Entrega_Ropa();
+            return obj.BD_Leer_toda_Entrega();
+
+        }
     }
 }

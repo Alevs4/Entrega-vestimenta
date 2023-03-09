@@ -41,12 +41,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.formRedondo2 = new Entrega_vestimenta.Componentes.FormRedondo();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.formRedondo3 = new Entrega_vestimenta.Componentes.FormRedondo();
-            this.formRedondo4 = new Entrega_vestimenta.Componentes.FormRedondo();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // formRedondo1
@@ -68,8 +68,8 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogin.BackgroundImage")));
             this.panelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogin.Controls.Add(this.pictureBox3);
             this.panelLogin.Controls.Add(this.BtnSalir);
             this.panelLogin.Controls.Add(this.BtnIngresar);
             this.panelLogin.Controls.Add(this.label3);
@@ -78,9 +78,9 @@
             this.panelLogin.Controls.Add(this.TxtPass);
             this.panelLogin.Controls.Add(this.label1);
             this.panelLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.panelLogin.Location = new System.Drawing.Point(472, 153);
+            this.panelLogin.Location = new System.Drawing.Point(367, 275);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(472, 607);
+            this.panelLogin.Size = new System.Drawing.Size(700, 320);
             this.panelLogin.TabIndex = 1;
             // 
             // BtnSalir
@@ -92,11 +92,11 @@
             this.BtnSalir.BorderSize = 0;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.Black;
-            this.BtnSalir.Location = new System.Drawing.Point(260, 435);
+            this.BtnSalir.Location = new System.Drawing.Point(451, 203);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(180, 55);
+            this.BtnSalir.Size = new System.Drawing.Size(168, 44);
             this.BtnSalir.TabIndex = 6;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextColor = System.Drawing.Color.Black;
@@ -112,11 +112,11 @@
             this.BtnIngresar.BorderSize = 0;
             this.BtnIngresar.FlatAppearance.BorderSize = 0;
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.BtnIngresar.Location = new System.Drawing.Point(22, 435);
+            this.BtnIngresar.Location = new System.Drawing.Point(445, 120);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(186, 55);
+            this.BtnIngresar.Size = new System.Drawing.Size(174, 44);
             this.BtnIngresar.TabIndex = 5;
             this.BtnIngresar.Text = "Ingresar";
             this.BtnIngresar.TextColor = System.Drawing.Color.Black;
@@ -128,7 +128,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(90, 283);
+            this.label3.Location = new System.Drawing.Point(86, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 32);
             this.label3.TabIndex = 4;
@@ -139,7 +139,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(91, 194);
+            this.label2.Location = new System.Drawing.Point(87, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 32);
             this.label2.TabIndex = 3;
@@ -147,18 +147,18 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(94, 233);
+            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(90, 120);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(306, 38);
+            this.TxtUsuario.Size = new System.Drawing.Size(349, 34);
             this.TxtUsuario.TabIndex = 2;
             // 
             // TxtPass
             // 
-            this.TxtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPass.Location = new System.Drawing.Point(94, 326);
+            this.TxtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPass.Location = new System.Drawing.Point(90, 213);
             this.TxtPass.Name = "TxtPass";
-            this.TxtPass.Size = new System.Drawing.Size(306, 38);
+            this.TxtPass.Size = new System.Drawing.Size(349, 34);
             this.TxtPass.TabIndex = 1;
             this.TxtPass.UseSystemPasswordChar = true;
             // 
@@ -167,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(135, 60);
+            this.label1.Location = new System.Drawing.Point(253, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 62);
             this.label1.TabIndex = 0;
@@ -189,16 +189,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // formRedondo3
-            // 
-            this.formRedondo3.CornerRadius = 30;
-            this.formRedondo3.TargetControl = this.TxtPass;
-            // 
-            // formRedondo4
-            // 
-            this.formRedondo4.CornerRadius = 30;
-            this.formRedondo4.TargetControl = this.TxtUsuario;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -209,6 +199,16 @@
             this.label4.Size = new System.Drawing.Size(651, 38);
             this.label4.TabIndex = 3;
             this.label4.Text = "Sistema de Entrega Vestimenta Personal";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(553, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -228,6 +228,7 @@
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,9 +248,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.TextBox TxtPass;
-        private Componentes.FormRedondo formRedondo3;
-        private Componentes.FormRedondo formRedondo4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

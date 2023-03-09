@@ -31,10 +31,6 @@ namespace Entrega_vestimenta
                 MessageBox.Show("Bienvenido/a" + Cls_Libreria.Apellidos, "Bienvenido al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                Lbl_NomUsu.Text = Cls_Libreria.Apellidos;
-                lbl_rolNom.Text = Cls_Libreria.Rol;
-
-
             }
             catch (Exception ex)
             {
@@ -46,8 +42,7 @@ namespace Entrega_vestimenta
         {
             Verificar = new DPFP.Verification.Verification();
             Resultado = new DPFP.Verification.Verification.Result();
-            BtnEditar.Visible = false;
-            BtnEliminar.Visible = false;
+        
         }
         private int xint = 1;
         private void xVerificationControl_OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
@@ -146,8 +141,8 @@ namespace Entrega_vestimenta
             try
             {
                 per.Idpersonal = TxtId.Text;
-                per.Nombres= TxtRut.Text;
-                per.Dni = TxtNombre.Text;
+                per.Nombres= TxtNombre.Text;
+                per.Dni = TxtRut.Text;
                 per.Rol = TxtArea.Text;
                 per.Estado = TxtEstado.Text;
                 per.Sexo = TxtSexo.Text;
@@ -195,7 +190,8 @@ namespace Entrega_vestimenta
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            FormularioBuscar buscar = new FormularioBuscar();
+          FormularioBuscar buscar = new FormularioBuscar();
+            this.Hide();  
             buscar.ShowDialog();
         }
         private void validarTextos()
@@ -224,17 +220,31 @@ namespace Entrega_vestimenta
                     TxtEstado.Text = Convert.ToString(dt.Rows[0]["estado"]);
                     TxtSexo.Text = Convert.ToString(dt.Rows[0]["sexo"]);
                     TxtTurno.Text = Convert.ToString(dt.Rows[0]["turno"]);
-                //    cbo_rol.Text = Convert.ToString(dt.Rows[0]["Id_rol"]);
-                //    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
-                //    CboRol.Text = Convert.ToString(dt.Rows[0]["Rol"]);
-                //    txt_IdPersona.Text = Convert.ToString(dt.Rows[0]["Id_Pernl"]);
-                //    Txtestado.Text = Convert.ToString(dt.Rows[0]["Estado_Per"]);
-                //    dtp_fechaNaci.Value = Convert.ToDateTime(dt.Rows[0]["Fec_Naci"]);
-                //    DTP_Cambio.Value = Convert.ToDateTime(dt.Rows[0]["FechaCambio"]);
-                //    CboTurno.Text = Convert.ToString(dt.Rows[0]["Turno"]);
-                //    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["Foto"]);
-                //    Bitmap bm = new Bitmap(ms);
-                //    Pic_persona.Image = bm;
+                    Txt1.Text = Convert.ToString(dt.Rows[0]["Kimono_rojo"]);
+                    Txt2.Text = Convert.ToString(dt.Rows[0]["Delantal_azul"]);
+                    Txt3.Text = Convert.ToString(dt.Rows[0]["Delantal_blanco"]);
+                    Txt4.Text = Convert.ToString(dt.Rows[0]["Zapatos"]);
+                    Txt5.Text = Convert.ToString(dt.Rows[0]["Chaleco_reflectante"]);
+                    Txt6.Text = Convert.ToString(dt.Rows[0]["parca_termica"]);
+                    Txt7.Text = Convert.ToString(dt.Rows[0]["Jardinera_termica"]);
+                    Txt8.Text = Convert.ToString(dt.Rows[0]["guantes_multiflex"]);
+                    Txt9.Text = Convert.ToString(dt.Rows[0]["guante_goma"]);
+                    Txt10.Text = Convert.ToString(dt.Rows[0]["guante_polar"]);
+                    Txt11.Text = Convert.ToString(dt.Rows[0]["gorro_polar"]);
+                    Txt12.Text = Convert.ToString(dt.Rows[0]["Cuello_polar"]);
+                    Txt13.Text = Convert.ToString(dt.Rows[0]["cofia_roja"]);
+                    Txt14.Text = Convert.ToString(dt.Rows[0]["Jockey"]);
+                    Txt15.Text = Convert.ToString(dt.Rows[0]["manguillas"]);
+                    Txt16.Text = Convert.ToString(dt.Rows[0]["traje_agua"]);
+                    Txt17.Text = Convert.ToString(dt.Rows[0]["cubre_calzado"]);
+                    Txt18.Text = Convert.ToString(dt.Rows[0]["botas_agua"]);
+                    Txt19.Text = Convert.ToString(dt.Rows[0]["polera_larga"]);
+                    Txt20.Text = Convert.ToString(dt.Rows[0]["poleron"]);
+                    Txt21.Text = Convert.ToString(dt.Rows[0]["pantalon_cargo"]);
+                    Txt22.Text = Convert.ToString(dt.Rows[0]["pechera"]);
+                    Txt23.Text = Convert.ToString(dt.Rows[0]["oberol"]);
+                    Txt24.Text = Convert.ToString(dt.Rows[0]["otro"]);
+
                 }
 
                 xedit = true;
@@ -247,6 +257,8 @@ namespace Entrega_vestimenta
             }
 
         }
+
+ 
     }
 
 }

@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtRutBuscar = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -113,17 +113,17 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(133, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 36);
+            this.label2.Size = new System.Drawing.Size(52, 29);
             this.label2.TabIndex = 259;
             this.label2.Text = "Rut";
             // 
-            // textBox1
+            // TxtRutBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(227, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 34);
-            this.textBox1.TabIndex = 260;
+            this.TxtRutBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRutBuscar.Location = new System.Drawing.Point(227, 230);
+            this.TxtRutBuscar.Name = "TxtRutBuscar";
+            this.TxtRutBuscar.Size = new System.Drawing.Size(326, 34);
+            this.TxtRutBuscar.TabIndex = 260;
             // 
             // BtnBuscar
             // 
@@ -162,7 +162,7 @@
             this.ClientSize = new System.Drawing.Size(823, 420);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtRutBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -185,7 +185,7 @@
         private Componentes.BotonesRedondos BtnSalir;
         private System.Windows.Forms.Label label3;
         private Componentes.BotonesRedondos BtnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtRutBuscar;
         private System.Windows.Forms.Label label2;
     }
 }
