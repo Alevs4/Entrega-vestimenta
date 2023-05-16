@@ -13,7 +13,7 @@ namespace Entrega_vestimenta.Datos
         public string Conectar()
         {
             StreamReader leer;
-            leer = new StreamReader(@"c:\ConexionBodega.txt");
+            leer = new StreamReader(@"c:\ConeccionAsistencia.txt");
             string linea;
             linea = leer.ReadLine();
             return linea;
@@ -25,7 +25,7 @@ namespace Entrega_vestimenta.Datos
         public static string Conectar2()
         {
             StreamReader leer;
-            leer = new StreamReader(@"c:\ConexionBodega.txt");
+            leer = new StreamReader(@"c:\ConeccionAsistencia.txt");
             string linea;
             linea = leer.ReadLine();
             return linea;

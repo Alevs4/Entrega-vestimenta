@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.botonesRedondos1 = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.BtnSalir = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BtnNuevo = new Entrega_vestimenta.Componentes.BotonesRedondos();
             this.TxtId = new System.Windows.Forms.TextBox();
+            this.TxtTurno = new System.Windows.Forms.TextBox();
+            this.TxtSexo = new System.Windows.Forms.TextBox();
+            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.TxtArea = new System.Windows.Forms.TextBox();
+            this.TxtRut = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnBuscar = new Entrega_vestimenta.Componentes.BotonesRedondos();
@@ -93,28 +102,21 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.TxtTurno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.TxtSexo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtEstado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtArea = new System.Windows.Forms.TextBox();
-            this.TxtRut = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LblHuella = new System.Windows.Forms.Label();
             this.xVerificationControl = new DPFP.Gui.Verification.VerificationControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,31 +181,37 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Entrega de Vestimenta e implementos de seguridad";
             // 
-            // tabControl1
+            // pictureBox1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 167);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1502, 747);
-            this.tabControl1.TabIndex = 1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1398, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 194;
+            this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnNuevo);
             this.tabPage1.Controls.Add(this.TxtId);
-            this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.TxtTurno);
-            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.TxtSexo);
-            this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.TxtEstado);
-            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.TxtArea);
             this.tabPage1.Controls.Add(this.TxtRut);
             this.tabPage1.Controls.Add(this.TxtNombre);
+            this.tabPage1.Controls.Add(this.label37);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -219,6 +227,25 @@
             this.tabPage1.Text = "Registro entrega Vestimenta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // BtnNuevo
+            // 
+            this.BtnNuevo.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnNuevo.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnNuevo.BorderColor = System.Drawing.Color.Black;
+            this.BtnNuevo.BorderRadius = 15;
+            this.BtnNuevo.BorderSize = 2;
+            this.BtnNuevo.FlatAppearance.BorderSize = 0;
+            this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNuevo.ForeColor = System.Drawing.Color.White;
+            this.BtnNuevo.Location = new System.Drawing.Point(571, 619);
+            this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Size = new System.Drawing.Size(176, 44);
+            this.BtnNuevo.TabIndex = 206;
+            this.BtnNuevo.Text = "Nuevo Registro";
+            this.BtnNuevo.TextColor = System.Drawing.Color.White;
+            this.BtnNuevo.UseVisualStyleBackColor = false;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
             // TxtId
             // 
             this.TxtId.Enabled = false;
@@ -227,6 +254,60 @@
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(149, 27);
             this.TxtId.TabIndex = 205;
+            // 
+            // TxtTurno
+            // 
+            this.TxtTurno.Enabled = false;
+            this.TxtTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTurno.Location = new System.Drawing.Point(301, 523);
+            this.TxtTurno.Name = "TxtTurno";
+            this.TxtTurno.Size = new System.Drawing.Size(149, 27);
+            this.TxtTurno.TabIndex = 195;
+            // 
+            // TxtSexo
+            // 
+            this.TxtSexo.Enabled = false;
+            this.TxtSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSexo.Location = new System.Drawing.Point(301, 457);
+            this.TxtSexo.Name = "TxtSexo";
+            this.TxtSexo.Size = new System.Drawing.Size(149, 27);
+            this.TxtSexo.TabIndex = 193;
+            // 
+            // TxtEstado
+            // 
+            this.TxtEstado.Enabled = false;
+            this.TxtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEstado.Location = new System.Drawing.Point(301, 388);
+            this.TxtEstado.Name = "TxtEstado";
+            this.TxtEstado.Size = new System.Drawing.Size(340, 27);
+            this.TxtEstado.TabIndex = 191;
+            // 
+            // TxtArea
+            // 
+            this.TxtArea.Enabled = false;
+            this.TxtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtArea.Location = new System.Drawing.Point(301, 322);
+            this.TxtArea.Name = "TxtArea";
+            this.TxtArea.Size = new System.Drawing.Size(340, 27);
+            this.TxtArea.TabIndex = 189;
+            // 
+            // TxtRut
+            // 
+            this.TxtRut.Enabled = false;
+            this.TxtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRut.Location = new System.Drawing.Point(301, 265);
+            this.TxtRut.Name = "TxtRut";
+            this.TxtRut.Size = new System.Drawing.Size(340, 27);
+            this.TxtRut.TabIndex = 188;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Enabled = false;
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(301, 204);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(436, 27);
+            this.TxtNombre.TabIndex = 187;
             // 
             // label37
             // 
@@ -789,15 +870,6 @@
             this.label10.TabIndex = 203;
             this.label10.Text = "Seleccione Vestimenta";
             // 
-            // TxtTurno
-            // 
-            this.TxtTurno.Enabled = false;
-            this.TxtTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTurno.Location = new System.Drawing.Point(301, 523);
-            this.TxtTurno.Name = "TxtTurno";
-            this.TxtTurno.Size = new System.Drawing.Size(149, 27);
-            this.TxtTurno.TabIndex = 195;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -807,15 +879,6 @@
             this.label9.Size = new System.Drawing.Size(63, 22);
             this.label9.TabIndex = 194;
             this.label9.Text = "Turno";
-            // 
-            // TxtSexo
-            // 
-            this.TxtSexo.Enabled = false;
-            this.TxtSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSexo.Location = new System.Drawing.Point(301, 457);
-            this.TxtSexo.Name = "TxtSexo";
-            this.TxtSexo.Size = new System.Drawing.Size(149, 27);
-            this.TxtSexo.TabIndex = 193;
             // 
             // label8
             // 
@@ -827,15 +890,6 @@
             this.label8.TabIndex = 192;
             this.label8.Text = "Sexo";
             // 
-            // TxtEstado
-            // 
-            this.TxtEstado.Enabled = false;
-            this.TxtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEstado.Location = new System.Drawing.Point(301, 388);
-            this.TxtEstado.Name = "TxtEstado";
-            this.TxtEstado.Size = new System.Drawing.Size(340, 27);
-            this.TxtEstado.TabIndex = 191;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -845,33 +899,6 @@
             this.label7.Size = new System.Drawing.Size(154, 22);
             this.label7.TabIndex = 190;
             this.label7.Text = "Estado Trabajor";
-            // 
-            // TxtArea
-            // 
-            this.TxtArea.Enabled = false;
-            this.TxtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtArea.Location = new System.Drawing.Point(301, 322);
-            this.TxtArea.Name = "TxtArea";
-            this.TxtArea.Size = new System.Drawing.Size(340, 27);
-            this.TxtArea.TabIndex = 189;
-            // 
-            // TxtRut
-            // 
-            this.TxtRut.Enabled = false;
-            this.TxtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRut.Location = new System.Drawing.Point(301, 265);
-            this.TxtRut.Name = "TxtRut";
-            this.TxtRut.Size = new System.Drawing.Size(340, 27);
-            this.TxtRut.TabIndex = 188;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Enabled = false;
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(301, 204);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(436, 27);
-            this.TxtNombre.TabIndex = 187;
             // 
             // label6
             // 
@@ -935,25 +962,15 @@
             this.xVerificationControl.TabIndex = 181;
             this.xVerificationControl.OnComplete += new DPFP.Gui.Verification.VerificationControl._OnComplete(this.xVerificationControl_OnComplete);
             // 
-            // tabPage2
+            // tabControl1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1494, 714);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Informes de entrega";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1398, 103);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 194;
-            this.pictureBox1.TabStop = false;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 167);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1502, 747);
+            this.tabControl1.TabIndex = 1;
             // 
             // Principal
             // 
@@ -970,12 +987,12 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -983,24 +1000,27 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Componentes.BotonesRedondos BtnSalir;
+        private Componentes.BotonesRedondos botonesRedondos1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.TextBox TxtTurno;
+        private System.Windows.Forms.TextBox TxtSexo;
+        private System.Windows.Forms.TextBox TxtEstado;
         private System.Windows.Forms.TextBox TxtArea;
         private System.Windows.Forms.TextBox TxtRut;
         private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtSexo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtEstado;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox TxtTurno;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label37;
+        public System.Windows.Forms.Panel panel2;
+        public Componentes.BotonesRedondos BtnBuscar;
+        public Componentes.BotonesRedondos BtnEliminar;
+        public Componentes.BotonesRedondos BtnEditar;
+        public Componentes.BotonesRedondos BtnGuardar;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox Txt24;
         private System.Windows.Forms.TextBox Txt23;
         private System.Windows.Forms.TextBox Txt22;
@@ -1050,18 +1070,16 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private Componentes.BotonesRedondos BtnSalir;
-        private Componentes.BotonesRedondos botonesRedondos1;
-        private System.Windows.Forms.Label label37;
-        public System.Windows.Forms.TextBox TxtId;
-        public Componentes.BotonesRedondos BtnEditar;
-        public Componentes.BotonesRedondos BtnEliminar;
-        public Componentes.BotonesRedondos BtnBuscar;
-        public Componentes.BotonesRedondos BtnGuardar;
-        public System.Windows.Forms.Panel panel2;
-        public DPFP.Gui.Verification.VerificationControl xVerificationControl;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label LblHuella;
+        public DPFP.Gui.Verification.VerificationControl xVerificationControl;
+        private System.Windows.Forms.TabControl tabControl1;
+        private Componentes.BotonesRedondos BtnNuevo;
     }
 }
